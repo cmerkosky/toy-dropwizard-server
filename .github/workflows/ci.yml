@@ -33,10 +33,15 @@ jobs:
             - name: Start up containers
               working-directory: .
               run: docker-compose up -d --build
+
+            - name: Set up Python
+              uses: actions/setup-python@v1
+              with:
+                python-version: '3.7'
                   
             - name: Install Python dependencies
               working-directory: .
-              run: pip install pytest requests
+              run: pip3 install pytest && pip3 install requests
             
             - name: Run system tests
               working-directory: .
