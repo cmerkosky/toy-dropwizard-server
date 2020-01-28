@@ -36,9 +36,9 @@ jobs:
 
             - name: Setup Python
               uses: actions/setup-python@v1
-                  with:
-                      python-version: '3.x'
-
+                with:
+                  python-version: '3.x'
+                  
             - name: Install 'pytest' and 'requests' Python packages
               working-directory: .
               run: pip install -U pytest && pip install -U requests
